@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.CenteringAndBiasActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        app:title="居中和偏移量"
+        android:background="?attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/explain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="1：居中显示、使用属性:
+        app:layout_constraintLeft_toLeftOf='parent'
+        app:layout_constraintRight_toRightOf='parent'" />
+
+
+    <Button
+        android:id="@+id/button_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="居中"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explain1" />
+
+    <!--
+    layout_constraintHorizontal_bias
+    layout_constraintVertical_bias
+    -->
+
+    <TextView
+        android:id="@+id/explain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="2：设置偏移量、使用属性:
+        layout_constraintHorizontal_bias\n        注：必须和居中显示属性一起使用才起作用"
+        app:layout_constraintTop_toBottomOf="@+id/button_center" />
+
+
+    <Button
+        android:id="@+id/button_bias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="偏移量"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explain2" />
+
+    <!--解释：
+    app:layout_constraintHorizontal_bias="0.1"指水平方向的偏移量
+    0.1是指前面的空白距离和后面的空白距离比为1：9
+
+    注：如果使用此属性，必须和
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    一起使用才生效
+
+    layout_constraintVertical_bias 同理
+    -->
+
+
+</android.support.constraint.ConstraintLayout>

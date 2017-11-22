@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.CircularPositioningActivity">
+
+
+    <!--
+    layout_constraintCircle
+    layout_constraintCircleRadius
+    layout_constraintCircleAngle
+     -->
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/red_point"
+        app:layout_constraintCircle="@id/image"
+        app:layout_constraintCircleAngle="35"
+        app:layout_constraintCircleRadius="40dp" />
+
+    <!--注：
+    app:layout_constraintCircle="@id/image" 表示以image为原点
+     app:layout_constraintCircleRadius="40dp"  半径44
+     app:layout_constraintCircleAngle="35" 与数值角度为35的方向上布局此控件
+
+     注：此属性是在constraint-layout包的1.1版本新增加的
+    -->
+
+
+</android.support.constraint.ConstraintLayout>

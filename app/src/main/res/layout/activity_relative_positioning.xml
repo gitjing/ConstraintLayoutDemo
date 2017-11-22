@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.RelativePositioningActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="相对位置"
+        app:titleTextColor="@android:color/white" />
+
+    <!--
+    layout_constraintLeft_toLeftOf
+    layout_constraintLeft_toRightOf
+    layout_constraintRight_toLeftOf
+    layout_constraintRight_toRightOf
+    layout_constraintTop_toTopOf
+    layout_constraintTop_toBottomOf
+    layout_constraintBottom_toTopOf
+    layout_constraintBottom_toBottomOf
+    layout_constraintBaseline_toBaselineOf
+    layout_constraintStart_toEndOf
+    layout_constraintStart_toStartOf
+    layout_constraintEnd_toStartOf
+    layout_constraintEnd_toEndOf
+    -->
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="奚梦瑶维密秀摔倒道歉"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <!--text_title使用属性
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    说明，如果要设置marginLeft 必须和app:layout_constraintLeft_toLeftOf="parent"配合使用，否则不起作用
+    -->
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/image"
+        app:layout_constraintLeft_toLeftOf="@id/text_title"
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+    <!--
+    app:layout_constraintStart_toStartOf="@id/text_title"
+    解释：image控件的起始端和text_title的起始对齐，如果想控件之前左对齐可以这样写.相同的含义含有
+    app:layout_constraintStart_toStartOf="@id/text_title"
+    -->
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:text="11月20日晚，一众国内外维密天使闪亮登场。但在表演环节中，奚梦瑶不慎出现意外跌倒在台上，意外发生后，奚梦瑶立刻整理了一下头发和身上的装饰，站起身来继续走T台，并且露出专业和自信的笑容，全场观众也为她拍手鼓励。"
+        app:layout_constraintLeft_toRightOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="时间：2小时前"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+    <!--注意:
+        我们将text_content设置了
+        app:layout_constraintLeft_toRightOf="@+id/image" 将content在image的右侧
+        app:layout_constraintTop_toTopOf="@+id/image"    content和image顶部对齐
+        app:layout_constraintRight_toRightOf="parent"   content和parent右侧对齐
+        android:layout_width="0dp" 或者match_parent 使用constraintLayout时，如果使用wrap_content就会造成显示不完的挤出屏幕外的问题
+        将值设置为0dp，相当于ConstraintLayout的match_constraint属性
+    -->
+
+
+</android.support.constraint.ConstraintLayout>
