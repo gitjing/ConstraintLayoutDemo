@@ -24,7 +24,8 @@
             android:name=".demolist.CenteringAndBiasActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".demolist.CircularPositioningActivity" />
-        <activity android:name=".demolist.MatchConstraintActivity"></activity>
+        <activity android:name=".demolist.MatchConstraintActivity" />
+        <activity android:name=".demolist.RatioActivity"></activity>
     </application>
 
 </manifest>
