@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.ljj.constraintlayoutdemo.demolist.CenteringAndBiasActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.CircularPositioningActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.MarginsActivity;
+import com.example.ljj.constraintlayoutdemo.demolist.MatchConstraintActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.RelativePositioningActivity;
 import com.example.ljj.constraintlayoutdemo.util.ActivityHolder;
 
@@ -51,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
     private void initHolderActivity() {
         activityHolder = new ActivityHolder();
         activityHolder.addActivity("Relative positioning", RelativePositioningActivity.class);
+        activityHolder.addActivity("matchConstraint",MatchConstraintActivity.class);
         activityHolder.addActivity("centering and bias", CenteringAndBiasActivity.class);
         activityHolder.addActivity("Circular positioning", CircularPositioningActivity.class);
         activityHolder.addActivity("margin", MarginsActivity.class);
+
 
     }
 

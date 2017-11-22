@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.MatchConstraintActivity">
+
+
+    <Button
+        android:id="@+id/button_match_constraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="match_constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_match_constraint" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="说明：\n主要介绍在constraintLayout控件下不再使用match_parent来填充父布局,而是使用0dp代替，这里的0sp指的是match_constraint\n可以理解为在ConstraintLayout中已经不支持MATCH_PARENT这个值了，使用0dp代替"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
