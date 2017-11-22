@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         activityHolder.addActivity("margin", MarginsActivity.class);
 
 
+
     }
 
     private class MainAdapter extends RecyclerView.Adapter {

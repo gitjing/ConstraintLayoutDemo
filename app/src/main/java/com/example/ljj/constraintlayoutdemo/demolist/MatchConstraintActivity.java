@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 import com.example.ljj.constraintlayoutdemo.R;
 
+/**
+ * crated by ljj on 2017.11.22
+ * 对android:layout_width="0dp"的说明
+ */
 public class MatchConstraintActivity extends AppCompatActivity {
 
     @Override
