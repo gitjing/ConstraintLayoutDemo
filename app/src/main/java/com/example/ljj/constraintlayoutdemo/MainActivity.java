@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.ljj.constraintlayoutdemo.demolist.CenteringAndBiasActivity;
+import com.example.ljj.constraintlayoutdemo.demolist.ChainsActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.CircularPositioningActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.MarginsActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.MatchConstraintActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         activityHolder.addActivity("Circular positioning", CircularPositioningActivity.class);
         activityHolder.addActivity("margin", MarginsActivity.class);
         activityHolder.addActivity("ratio", RatioActivity.class);
+        activityHolder.addActivity("chains", ChainsActivity.class);
 
 
     }

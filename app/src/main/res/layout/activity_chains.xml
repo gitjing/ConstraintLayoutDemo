@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.ChainsActivity">
+
+
+    <!--设置三个等分按钮
+    注：设置三等分需要两两相互依赖
+    还可以通过
+    app:layout_constraintHorizontal_weight
+     android:layout_width="0dp"
+    来对元素进行比例分配
+    -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="乱花"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="渐欲"
+        app:layout_constraintLeft_toRightOf="@id/button1"
+        app:layout_constraintRight_toLeftOf="@id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="迷人眼"
+        app:layout_constraintLeft_toRightOf="@id/button2"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!--将第一个关联的View中设置
+    app:layout_constraintHorizontal_chainStyle="spread"
+    并且 android:layout_width="wrap_content"不是0dp
+    属性，控件就会根据自己所占的控件分配大小
+    默认情况下chainStyle的值为spread
+    -->
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="浅草"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="才能"
+        app:layout_constraintLeft_toRightOf="@id/button4"
+        app:layout_constraintRight_toLeftOf="@id/button6"
+        app:layout_constraintTop_toTopOf="@id/button4"
+
+        />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没马蹄"
+        app:layout_constraintLeft_toRightOf="@id/button5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button4" />
+
+
+    <!--将第一个关联的View中设置
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    并且 android:layout_width="wrap_content"不是0dp
+    属性，链条会分散显示但是断点不会改变位置
+    -->
+    <Button
+        android:id="@+id/button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="最爱"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button02"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <Button
+        android:id="@+id/button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="湖东"
+        app:layout_constraintLeft_toRightOf="@id/button01"
+        app:layout_constraintRight_toLeftOf="@id/button03"
+        app:layout_constraintTop_toTopOf="@id/button01"
+
+        />
+
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="行不足"
+        app:layout_constraintLeft_toRightOf="@id/button02"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button01"
+
+        />
+
+
+    <!--将第一个关联的View中设置
+  app:layout_constraintHorizontal_chainStyle="packed"
+  并且 android:layout_width="wrap_content"不是0dp
+  属性，链条上的控件将会被捆绑在一起，不会分开，设置
+  app:layout_constraintHorizontal_bias属性，会修改其偏移量
+  -->
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="绿杨"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button05"
+        app:layout_constraintTop_toBottomOf="@id/button01" />
+
+    <Button
+        android:id="@+id/button05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="阴里"
+        app:layout_constraintLeft_toRightOf="@id/button04"
+        app:layout_constraintRight_toLeftOf="@id/button06"
+        app:layout_constraintTop_toTopOf="@id/button04"
+
+        />
+
+    <Button
+        android:id="@+id/button06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="白沙堤"
+        app:layout_constraintLeft_toRightOf="@id/button05"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button04"
+
+        />
+
+</android.support.constraint.ConstraintLayout>
