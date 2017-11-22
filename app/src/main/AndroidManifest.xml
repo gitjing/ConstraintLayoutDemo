@@ -19,10 +19,7 @@
         <activity
             android:name=".demolist.RelativePositioningActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".demolist.MarginsActivity"
-            android:label="@string/title_activity_margins"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".demolist.MarginsActivity" />
         <activity
             android:name=".demolist.CenteringAndBiasActivity"
             android:theme="@style/AppTheme.NoActionBar" />

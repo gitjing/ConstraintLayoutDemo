@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ljj.constraintlayoutdemo.demolist.MarginsActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_margins" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="乱花渐欲迷人眼，浅草才能没马蹄" />
 
-</android.support.design.widget.CoordinatorLayout>
+
+    <!--注：如果我将imageView视图隐藏掉，则text2会上移，之前设置的约束没有作用
+    如果我想在imageView隐藏掉之后，text2和text1的距离不变，可以使用
+    layout_goneMarginTop 使用，这个属性的意思是，当text2的top依赖被GONE之后，起作用
+    相对应的属性还有
+    layout_goneMarginStart
+    layout_goneMarginEnd
+    layout_goneMarginLeft
+    layout_goneMarginTop
+    layout_goneMarginRight
+    layout_goneMarginBottom
+    -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_circle"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最爱湖东行不足，绿杨阴里白沙堤"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_goneMarginTop="100dp" />
+
+
+</android.support.constraint.ConstraintLayout>
