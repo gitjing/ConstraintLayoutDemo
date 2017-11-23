@@ -26,7 +26,8 @@
         <activity android:name=".demolist.CircularPositioningActivity" />
         <activity android:name=".demolist.MatchConstraintActivity" />
         <activity android:name=".demolist.RatioActivity" />
-        <activity android:name=".demolist.ChainsActivity"></activity>
+        <activity android:name=".demolist.ChainsActivity" />
+        <activity android:name=".demolist.GuideLineActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ljj.constraintlayoutdemo.demolist.GuideLineActivity">
+
+    <!--注：GuideLine顾名思义是辅助线的意思
+    主要用于辅助布局，即类似为辅助线，横向的、纵向的。该布局是不会显示到界面上的。
+    主要有三个属性：
+    layout_constraintGuide_begin
+    layout_constraintGuide_end
+    layout_constraintGuide_percent
+    android:orientation 通过这个属性来区分是竖直的还是水平的辅助线
+    -->
+
+    <!--辅助线1 竖直辅助线，距离左侧100dp-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp"
+
+        />
+
+
+    <!--竖直线2 水平辅助线，距离上测150dp-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="150dp" />
+
+
+
+    <!--button1位置在两个辅助线的交点位置，通过两个辅助线来控制控件位置-->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button1"
+        app:layout_constraintBottom_toBottomOf="@id/guide_line1"
+        app:layout_constraintStart_toStartOf="@id/guide_line" />
+
+
+    <!--button2 上下居中，并且左侧依赖于guide_line的辅助线显示-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guide_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
