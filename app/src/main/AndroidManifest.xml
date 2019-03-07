@@ -27,7 +27,8 @@
         <activity android:name=".demolist.MatchConstraintActivity" />
         <activity android:name=".demolist.RatioActivity" />
         <activity android:name=".demolist.ChainsActivity" />
-        <activity android:name=".demolist.GuideLineActivity"></activity>
+        <activity android:name=".demolist.GuideLineActivity" />
+        <activity android:name=".demolist.BarrierActivity"></activity>
     </application>
 
 </manifest>

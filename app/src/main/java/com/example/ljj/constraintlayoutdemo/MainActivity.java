@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ljj.constraintlayoutdemo.demolist.BarrierActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.CenteringAndBiasActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.ChainsActivity;
 import com.example.ljj.constraintlayoutdemo.demolist.CircularPositioningActivity;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         activityHolder.addActivity("ratio", RatioActivity.class);
         activityHolder.addActivity("chains", ChainsActivity.class);
         activityHolder.addActivity("guideLine", GuideLineActivity.class);
+        activityHolder.addActivity("Barrier",BarrierActivity.class);
 
 
     }
